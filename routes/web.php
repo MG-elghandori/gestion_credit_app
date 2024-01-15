@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ClientController;
+use App\Livewire\MainComponent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('Dashbord.Dashbord');
-});
+// Route::get('/', function () {
+//     return view('Dashbord.Dashbord');
+// });
+
+Route::resource('/Dashboard', ClientController::class);
+
