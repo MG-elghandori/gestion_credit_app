@@ -119,10 +119,10 @@
                             </svg></button>
                     </div>
                 </div>
-                
+
                 <div class="show-data bg-light col-11 card">
                     @if(count($data)>0)
-                    <div class="m-2 text-primary">Lists des clients</div>
+                    <h4 class="m-2 text-primary">Lists des clients</h4>
                     <table class="table border">
                         <thead>
                             <tr>
@@ -139,7 +139,7 @@
                         @foreach($data as $All)
                         <tbody>
                             <tr>
-                                <th scope="row">{{ $All->id }}</th>
+                                <th scope="row" class="text-danger">{{ $All->id }}</th>
                                 <td>{{ $All->nom }}</td>
                                 <td>{{ $All->telephone }}</td>
                                 <td>{{ $All->nomProduit }}</td>

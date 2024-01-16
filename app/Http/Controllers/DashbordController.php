@@ -17,4 +17,17 @@ class DashbordController extends Controller
     public function create(){
         return view("Dashbord.create");
     }
+    public function register_user(Request $request){
+        $validatedData = $request->validate([
+            'nom' => 'required',
+            'telephone' => 'required',
+            'nomProduit' => 'required',
+            'quantite' => 'required|integer',
+            'prix' => 'required|numeric',
+            'prixAvance' => 'required|numeric',
+        ]);
+        Client::create($validatedData);
+        return redirect()->route('Dashbord');
+    }
+    
 }

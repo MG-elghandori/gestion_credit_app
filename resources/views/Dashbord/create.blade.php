@@ -93,6 +93,9 @@
         #copyright small {
             font-size: 12px;
         }
+        .text-12px{
+            font-size: 12px;
+        }
     </style>
     @livewireStyles
 </head>
@@ -121,54 +124,86 @@
                 </div>
                 <div class="show-data bg-light col-11 card container">
                     <h4 class=" text-primary my-4">Register New Userr</h4>
-                    <form action="">
+                    <form action="{{route('register_user')}}" method="post">
+                        @csrf
                         <div class="row mb-2">
                             <div class="col">
                                 <div data-mdb-input-init class="form-outline">
                                     <input type="text" id="form3Example1" name="nom" class="form-control" />
+                                    @error('nom')
+                                    <small class="text-danger text-12px">{{ $message }}</small>
+                                    @else
                                     <label class="form-label" for="form3Example1">nom</label>
+                                    @enderror
                                 </div>
+
                             </div>
                             <div class="col">
                                 <div data-mdb-input-init class="form-outline">
                                     <input type="text" id="form3Example2" name="telephone" class="form-control" />
-                                    <label class="form-label" for="form3Example2">telephone</label>
+                                    @error('telephone')
+                                    <small class="text-danger text-12px">{{ $message }}</small>
+                                    @else
+                                    <label class="form-label" for="form3Example1">telephone</label>
+                                    @enderror
                                 </div>
+                             
                             </div>
                         </div>
                         <div class="row mb-2">
                             <div class="col">
                                 <div data-mdb-input-init class="form-outline">
                                     <input type="text" id="form3Example3" name="nomProduit" class="form-control" />
-                                    <label class="form-label" for="form3Example3">nom produit</label>
+                                    @error('nomProduit')
+                                    <small class="text-danger text-12px">{{ $message }}</small>
+                                    @else
+                                    <label class="form-label" for="form3Example1">nom Produit</label>
+                                    @enderror
                                 </div>
+                              
                             </div>
                             <div class="col">
                                 <div data-mdb-input-init class="form-outline">
                                     <input type="number" id="form3Example4" name="quantite" class="form-control" />
-                                    <label class="form-label" for="form3Example4">quantite</label>
+                                    @error('quantite')
+                                    <small class="text-danger text-12px">{{ $message }}</small>
+                                    @else
+                                    <label class="form-label" for="form3Example1">quantite</label>
+                                    @enderror
                                 </div>
+                             
                             </div>
                         </div>
                         <div class="row mb-2">
                             <div class="col">
                                 <div data-mdb-input-init class="form-outline">
                                     <input type="number" id="form3Example5" name="prix" class="form-control" />
-                                    <label class="form-label" for="form3Example5">prix</label>
+                                    @error('prix')
+                                    <small class="text-danger text-12px">{{ $message }}</small>
+                                    @else
+                                    <label class="form-label" for="form3Example1">prix</label>
+                                    @enderror
                                 </div>
+                               
                             </div>
                             <div class="col">
                                 <div data-mdb-input-init class="form-outline">
                                     <input type="number" id="form3Example6" name="prixAvance" class="form-control" />
-                                    <label class="form-label" for="form3Example6">prix avance</label>
+                                    @error('prixAvance')
+                                    <small class="text-danger text-12px">{{ $message }}</small>
+                                    @else
+                                    <label class="form-label" for="form3Example1">prixAvance</label>
+                                    @enderror
                                 </div>
+                               
                             </div>
                         </div>
                         <div class="mb-4 col-3">
-                            <button type="button" class="btn btn-primary btn-block col-12">Registration</button>
+                            <button type="submit" class="btn btn-primary btn-block col-12">Registration</button>
                         </div>
                 </div>
                 </form>
+
 
         </div>
 

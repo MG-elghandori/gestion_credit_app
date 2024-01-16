@@ -20,4 +20,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/Dashboard', [DashbordController::class,"index"])->name("Dashbord");
 Route::get('/create', [DashbordController::class,"create"])->name("create");
+Route::post('/register_user', [DashbordController::class,"register_user"])->name("register_user");
 
