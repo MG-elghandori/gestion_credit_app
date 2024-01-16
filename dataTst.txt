@@ -1,0 +1,1 @@
+INSERT INTO `clients` (`id`, `nom`, `telephone`, `nomProduit`, `quantite`, `prix`, `prixAvance`, `created_at`, `updated_at`) VALUES (NULL, 'mohammed', '065454643', 'ordinateur', '1', '39403', '2000', NULL, NULL);

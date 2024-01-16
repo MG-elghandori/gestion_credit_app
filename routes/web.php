@@ -1,7 +1,6 @@
 <?php
 
-use App\Http\Controllers\ClientController;
-use App\Livewire\MainComponent;
+use App\Http\Controllers\DashbordController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,5 +18,6 @@ use Illuminate\Support\Facades\Route;
 //     return view('Dashbord.Dashbord');
 // });
 
-Route::resource('/Dashboard', ClientController::class);
+Route::get('/Dashboard', [DashbordController::class,"index"])->name("Dashbord");
+Route::get('/create', [DashbordController::class,"create"])->name("create");
 
