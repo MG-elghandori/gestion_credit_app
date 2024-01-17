@@ -9,7 +9,7 @@ class DashbordController extends Controller
 {
     public function index()
     {
-        $data=Client::orderBy('created_at', 'desc')->paginate(7);
+        $data=Client::orderBy('created_at', 'desc')->paginate(6);
         $total=Client::count();
         return view("Dashbord.Dashbord",compact('data','total'));
     }
@@ -27,7 +27,7 @@ class DashbordController extends Controller
             'prixAvance' => 'required|numeric',
         ]);
         Client::create($validatedData);
-        return redirect()->route('Dashbord');
+        return redirect()->route('Dashbord')->with("success", "L'ajoute a bien réussi!");
     }
     
 }

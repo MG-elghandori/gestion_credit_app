@@ -14,7 +14,7 @@
 
     <style>
         .principal {
-            height: 90vh;
+            height: 95vh;
             background-color: #ededf7;
         }
 
@@ -93,6 +93,15 @@
         #copyright small {
             font-size: 12px;
         }
+        #message{
+            position: absolute;
+             z-index: 3431;
+             left: 16%;
+             top: 4%;
+        }
+        .cursor-point:hover {
+            cursor: pointer;
+        }
     </style>
     @livewireStyles
 </head>
@@ -105,7 +114,7 @@
             <!-- menu -->
 
             <main class="col-10 m2 d-flex flex-column align-items-center">
-            <div class="main-m2-p1 col-12 bg-primary d-flex justify-content-between align-items-start p-3">
+                <div class="main-m2-p1 col-12 bg-primary d-flex justify-content-between align-items-start p-3">
                     <div id="divsearch" class="search-container">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search text-light" viewBox="0 0 16 16">
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
@@ -121,6 +130,12 @@
                 </div>
 
                 <div class="show-data bg-light col-11 card">
+                @if ($message = Session::get('success'))
+                <div id="message" class="col-md-6 mx-auto col-lg-8 mb-2 mt-0 d-flex justify-content-between align-items-center alert alert-success rounded" role="alert">
+                    <span class="block sm:inline">{{ $message }}</span>
+                    <div class="font-bold text-lime-600 cursor-point" onclick="deleteMessage()">X</div>
+                </div>
+                @endif
                     @if(count($data)>0)
                     <h4 class="m-2 text-primary">Lists des clients</h4>
                     <table class="table border">
@@ -171,7 +186,7 @@
                         @endforeach
                     </table>
                     @if ($data->lastPage() > 1)
-                    <div class="pagination d-flex justify-content-between align-items-center my-1">
+                    <div class="mx-3 mb-1 pagination d-flex justify-content-between align-items-center">
                         <div class="text-light bg-danger p-1 rounded" style="font-size: 14px;">le Total des client:{{$total}}</div>
                         <div>
                             <div class="btn-group " role="group">
@@ -207,7 +222,10 @@
 
 <script src="./Assets/back.js"></script>
 <script type="text/javascript">
-
+  function deleteMessage() {
+        var messageDiv = document.getElementById('message');
+        messageDiv.remove();
+    }
 </script>
 
 
