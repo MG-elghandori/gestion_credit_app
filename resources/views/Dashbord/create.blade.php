@@ -14,7 +14,7 @@
 
     <style>
         .principal {
-            height: 90vh;
+            height: 95vh;
             background-color: #ededf7;
         }
 
@@ -78,13 +78,6 @@
             border: none;
         }
 
-        #menu ul li {
-            background-color: rgba(211, 211, 211, 0.4);
-        }
-
-        #menu ul li:hover {
-            background-color: rgba(211, 211, 211, 0.7);
-        }
 
         #copyright {
             height: 36vh;
