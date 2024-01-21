@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashbord</title>
+    <title>create</title>
     <link rel="stylesheet" href="./Assets/style.css">
     <link rel="stylesheet" href="./Assets/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -86,7 +86,8 @@
         #copyright small {
             font-size: 12px;
         }
-        .text-12px{
+
+        .text-12px {
             font-size: 12px;
         }
     </style>
@@ -103,7 +104,7 @@
             <main class="col-10 m2 d-flex flex-column align-items-center">
                 <div class="main-m2-p1 col-12 bg-primary d-flex justify-content-end align-items-start p-3">
 
-            
+
                     <div>
                         <button type="submit" id="btn_log_out" class="btn btn-light rounded-circle p-2 d-flex justify-content-center align-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-box-arrow-right text-light  " viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z" />
@@ -136,7 +137,7 @@
                                     <label class="form-label" for="form3Example1">telephone</label>
                                     @enderror
                                 </div>
-                             
+
                             </div>
                         </div>
                         <div class="row mb-2">
@@ -149,7 +150,7 @@
                                     <label class="form-label" for="form3Example1">nom Produit</label>
                                     @enderror
                                 </div>
-                              
+
                             </div>
                             <div class="col">
                                 <div data-mdb-input-init class="form-outline">
@@ -160,7 +161,7 @@
                                     <label class="form-label" for="form3Example1">quantite</label>
                                     @enderror
                                 </div>
-                             
+
                             </div>
                         </div>
                         <div class="row mb-2">
@@ -173,7 +174,7 @@
                                     <label class="form-label" for="form3Example1">prix</label>
                                     @enderror
                                 </div>
-                               
+
                             </div>
                             <div class="col">
                                 <div data-mdb-input-init class="form-outline">
@@ -184,20 +185,16 @@
                                     <label class="form-label" for="form3Example1">prixAvance</label>
                                     @enderror
                                 </div>
-                               
+
                             </div>
                         </div>
                         <div class="mb-4 col-3">
                             <button type="submit" class="btn btn-primary btn-block col-12">Registration</button>
                         </div>
+                    </form>
                 </div>
-                </form>
-
-
+            </main>
         </div>
-
-        </main>
-
         </div>
     </section>
     @livewireScripts
