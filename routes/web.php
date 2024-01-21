@@ -23,3 +23,4 @@ Route::get('/create', [DashbordController::class,"create"])->name("create");
 Route::post('/register_user', [DashbordController::class,"register_user"])->name("register_user");
 Route::delete('/delete_user/{id}', [DashbordController::class,"delete"])->name("delete_user");
 Route::get('/corbeille', [DashbordController::class,"corbeille"])->name("corbeille");
+Route::delete('/delete_corbeille/{id}', [DashbordController::class,"delete_corbeille"])->name("delete_corbeille");

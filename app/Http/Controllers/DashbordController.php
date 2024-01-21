@@ -41,4 +41,10 @@ class DashbordController extends Controller
         $datadelete=Deleteclient::All();
         return view("Dashbord.clientsDelete",compact('datadelete'));
     }
+
+    public function delete_corbeille($id)
+    {
+        Deleteclient::find($id)->delete();
+        return redirect()->route('corbeille')->with("success", "La suppression a bien réussi!");
+    }
 }
